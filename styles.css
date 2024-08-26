@@ -1,0 +1,174 @@
+/* Reset and global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* Search Bar */
+#search {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #7a42f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Theorem List */
+ul#theoremList {
+    list-style: none;
+    padding: 0;
+}
+
+ul#theoremList li {
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+ul#theoremList li:hover {
+    transform: translateY(-5px);
+}
+
+ul#theoremList li button {
+    background-color: #7a42f4;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+ul#theoremList li button:hover {
+    background-color: #5c2db2;
+}
+
+/* Popup Overlay */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Popup Content */
+.popup-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #444;
+}
+
+/* Theorem Details Styling */
+.popup-content h2 {
+    color: #7a42f4;
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.popup-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.popup-content a {
+    color: #7a42f4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.popup-content a:hover {
+    color: #5c2db2;
+}
+
+/* Additional Styling for Example and Use Cases */
+.popup-content h3 {
+    color: #4a4a4a;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.popup-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Fade-in Animation for Popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
